@@ -30,11 +30,12 @@ def scanner(target_host,target_ports):
         print ('[+] Scan Results for ' + target_ip)
     setdefaulttimeout(1)
     for target_port in target_ports:
+
         t = Thread(target=scan, args=(target_host, int(target_port)))
         t.start()
 
 def main():
-    parser= optparse.OptionParser('Usage of scanner: ' '-H <target host> -p <target port>') # prompts the message of how to use the scanner
+    parser= optparse.OptionParser('Usage of scanner: ' '-Z <target host> -p <target port>') # prompts the message of how to use the scanner
     parser.add_option('-Z', dest='target_host', type = 'string', help='Specify the target host')
     parser.add_option('-p', dest='target_port', type = 'string', help='Specify the target ports seperated by commas (,)')
     (options, args) = parser.parse_args()
