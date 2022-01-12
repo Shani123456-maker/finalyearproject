@@ -1,6 +1,6 @@
 from boofuzz import *
 
-session = Session(target=Target(connection=SocketConnection('172.16.16.145',9999, proto='tcp')))
+session = Session(target=Target(connection=SocketConnection('172.16.14.205',9999, proto='tcp')))
 
 s_initialize("trun")
 s_static("TRUN")
